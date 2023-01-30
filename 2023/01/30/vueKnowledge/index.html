@@ -160,8 +160,8 @@
 <p>​       (6)v-on@[绑定事件监听器]:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">“add”</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>​        使用v-on指令时，若监听器无参数时可省略()；若监听器有参数但省略()则默认第一个形参为事件对象；若监听器有多个参数且包含事件对象，需要用$修饰符</p>
-<p><img src="1675057383763-30.png" alt></p>
-<p><img src="1675057383763-29.png" alt></p>
+<p><img src="./vueKnowledge.assets/1675057383763-30.png" alt=""></p>
+<p><img src="./vueKnowledge.assets/1675057383763-29.png" alt=""></p>
 <p>(7)v-if v-else-if v-else[条件渲染(不符合条件的元素及其子代脱离当前HTML文档不渲染)]:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;mark&gt;=90”&gt;优&lt;/p&gt;&lt;p v-else-if=&quot;</span><span class="attr">mark</span>&gt;</span>=80”&gt;良<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>合格<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>​       (8)v-show[切换元素CSS样式的display属性]</p>
@@ -174,24 +174,24 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> #<span class="attr">btn</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>左span<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>语法糖:表示一种便捷写法，它对语法本身的功能和表达能力没有影响</p>
 <h1>🦀vue的组件注册</h1>
-<p><img src="image-20230130111929356.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130111929356.png" alt=""></p>
 <h2 id="局部组件：">局部组件：</h2>
 <p>需要引入启用</p>
-<p><img src="image-20230130111747399.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130111747399.png" alt=""></p>
 <p>使用</p>
-<p><img src="image-20230130112917181.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130112917181.png" alt=""></p>
 <h2 id="全局组件：">全局组件：</h2>
 <p>现在main.js中引入组件文件夹</p>
-<p><img src="image-20230130112225305.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130112225305.png" alt=""></p>
 <p>引入注册组件的js</p>
-<p><img src="image-20230130112342604.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130112342604.png" alt=""></p>
 <p>在myplugin.js中全局注册组件</p>
-<p><img src="image-20230130124645030.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130124645030.png" alt=""></p>
 <p>直接使用</p>
-<p><img src="image-20230130113142253.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130113142253.png" alt=""></p>
 <h2 id="其他方法：">其他方法：</h2>
-<p><img src="image-20230130124813408.png" alt></p>
-<p><img src="image-20230130124829753.png" alt></p>
+<p><img src="./vueKnowledge.assets/image-20230130124813408.png" alt=""></p>
+<p><img src="./vueKnowledge.assets/image-20230130124829753.png" alt=""></p>
 <h1>🦀vue的生命周期</h1>
 <table>
 <thead>
