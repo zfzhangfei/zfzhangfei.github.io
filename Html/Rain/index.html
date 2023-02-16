@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            height: 100%;
+        }
+
+        body {
+            background: #93b5cf;
+        }
+
+        #cloud-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* box-shadow: offset-x offset-y blur spread color position; */
+
+        /*
+        offset-x 用于声明阴影的水平偏移，就是阴影在 X 轴上的位置。
+        当值为正数， 阴影就位于元素右侧，
+        若值为负数，阴影位于元素的左侧。
+        同理
+        offset-y 用于声明阴影的垂直偏移，就是阴影在 Y 轴上的位置。
+        当值为正数， 阴影就位于元素下侧，
+        若值为负数，阴影位于元素的上侧。
+         */
+        .cloud {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: white 65px -15px 0 -4px,
+                white -65px -15px 0 -4px,
+                white 0px -70px 0 10px,
+                white -80px -70px 0 -9px,
+                white -120px 0px 0 -4px;
+            z-index: 1;
+        }
+
+        .ground {
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            bottom: -50px;
+            border-radius: 50%;
+            background-color: brown;
+            z-index: 1;
+        }
+
+        .rains {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+        }
+
+        .rain {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: skyblue;
+            animation: droprain 1s linear infinite;
+            animation-duration: calc(15s/var(--rain));
+            transform-origin: bottom;
+        }
+
+        @keyframes droprain {
+            0% {
+                transform: translateY(0) scale(2);
+            }
+
+            70% {
+                transform: translateY(25vh) scale(1);
+            }
+
+            100% {
+                transform: translateY(50vh) scale(1);
+            }
+        }
+
+        .flower{
+            width: 10px;
+            height: 50px;
+            background-color: green;
+            position: absolute;
+            bottom: 40px;
+            animation: root 1s linear infinite;
+          
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div id="cloud-box">
+        <div class="cloud"></div>
+        <div class="ground"></div>
+        <div class="rains">
+            <!--style='--元素的名字和数字' 可在calc直接引用(var)数值 使雨点散乱 -->
+            <span class="rain" style="--rain:10"></span>
+            <span class="rain" style="--rain:14"></span>
+            <span class="rain" style="--rain:12"></span>
+            <span class="rain" style="--rain:15"></span>
+            <span class="rain" style="--rain:13"></span>
+            <span class="rain" style="--rain:11"></span>
+            <span class="rain" style="--rain:14"></span>
+            <span class="rain" style="--rain:15"></span>
+            <span class="rain" style="--rain:18"></span>
+            <span class="rain" style="--rain:11"></span>
+            <span class="rain" style="--rain:12"></span>
+        </div>
+        <!-- <div class="flower"> </div> -->
+    </div>
+</body>
+
+</html>
